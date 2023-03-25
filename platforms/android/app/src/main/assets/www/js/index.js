@@ -26,4 +26,33 @@ function onDeviceReady() {
 
     console.log('Running cordova-' + cordova.platformId + '@' + cordova.version);
     document.getElementById('deviceready').classList.add('ready');
+    /*添加电量状态的监听*/
+    window.addEventListener("batterystatus", onBatteryStatus, false);
+    /*点按钮拍照*/
+    document.getElementById("btnTakePhoto")
+        .addEventListener('click', function () {
+            navigator.camera.getPicture(cameraSuccess, cameraError, {
+                quality: 50,
+                destinationType: Camera.DestinationType.DATA_URL
+            });
+        })
+
+}
+
+function cameraSuccess(imageData) {
+    var image = document.getElementById('imgPhoto');
+    image.src = "data:image/jpeg;base64," + imageData;
+}
+
+function cameraError(msg) {
+    console.log(msg)
+}
+
+/**
+ * 显示电量
+ * @param status
+ */
+function onBatteryStatus(status) {
+    console.log("Level: " + status.level + " isPlugged: " + status.isPlugged);
+    document.getElementById('batterystatus').innerText = "当前电量：" + status.level + "%"
 }

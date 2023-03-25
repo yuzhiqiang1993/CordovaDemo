@@ -9,6 +9,10 @@
   "installed_plugins": {
     "cordova-plugin-battery-status": {
       "PACKAGE_NAME": "com.yzq.cordovademo"
+    },
+    "cordova-plugin-camera": {
+      "ANDROIDX_CORE_VERSION": "1.6.+",
+      "PACKAGE_NAME": "com.yzq.cordovademo"
     }
   },
   "dependent_plugins": {}
