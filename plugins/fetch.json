@@ -14,5 +14,13 @@
     },
     "is_top_level": true,
     "variables": {}
+  },
+  "com-yzq-customer-plugin": {
+    "source": {
+      "type": "local",
+      "path": "/Users/yuzhiqiang/workspace/Hybrid/CordovaDemo/node_modules/customerplugin"
+    },
+    "is_top_level": true,
+    "variables": {}
   }
 }

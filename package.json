@@ -15,7 +15,9 @@
   "devDependencies": {
     "cordova-android": "^11.0.0",
     "cordova-plugin-battery-status": "^2.0.3",
-    "cordova-plugin-camera": "^6.0.0"
+    "cordova-plugin-camera": "^6.0.0",
+    "customer-plugin": "file:../cordova_plugin/customer-plugin",
+    "customerplugin": "file:../CordovaPlugin/CustomerPlugin"
   },
   "cordova": {
     "platforms": [
@@ -25,7 +27,8 @@
       "cordova-plugin-battery-status": {},
       "cordova-plugin-camera": {
         "ANDROIDX_CORE_VERSION": "1.6.+"
-      }
+      },
+      "com-yzq-customer-plugin": {}
     }
   }
 }

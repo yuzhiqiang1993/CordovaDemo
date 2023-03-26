@@ -39,10 +39,19 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       "clobbers": [
         "CameraPopoverHandle"
       ]
+    },
+    {
+      "id": "com-yzq-customer-plugin.CustomerPlugin",
+      "file": "plugins/com-yzq-customer-plugin/www/CustomerPlugin.js",
+      "pluginId": "com-yzq-customer-plugin",
+      "clobbers": [
+        "customer_plugin"
+      ]
     }
   ];
   module.exports.metadata = {
     "cordova-plugin-battery-status": "2.0.3",
-    "cordova-plugin-camera": "6.0.0"
+    "cordova-plugin-camera": "6.0.0",
+    "com-yzq-customer-plugin": "1.0.0"
   };
 });

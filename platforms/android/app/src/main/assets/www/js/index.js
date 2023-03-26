@@ -19,6 +19,7 @@
 
 // Wait for the deviceready event before using any of Cordova's device APIs.
 // See https://cordova.apache.org/docs/en/latest/cordova/events/events.html#deviceready
+
 document.addEventListener('deviceready', onDeviceReady, false);
 
 function onDeviceReady() {
@@ -35,6 +36,21 @@ function onDeviceReady() {
                 quality: 50,
                 destinationType: Camera.DestinationType.DATA_URL
             });
+        })
+
+    /*调自定义插件*/
+    document.getElementById('btnCutomerPlugin')
+        .addEventListener('click', function () {
+            console.log('customer_plugin.coolMethod')
+            customer_plugin.coolMethod(
+                "H5传递的参数",
+                function () {
+                    console.log("成功的回调")
+                },
+                function () {
+                    console.log("失败的回调")
+                }
+            )
         })
 
 }

@@ -15,6 +15,10 @@
             {
               "xml": "<feature name=\"Camera\"><param name=\"android-package\" value=\"org.apache.cordova.camera.CameraLauncher\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"CustomerPlugin\"><param name=\"android-package\" value=\"com-yzq-customer-plugin.CustomerPlugin\" /></feature>",
+              "count": 1
             }
           ]
         }
@@ -47,6 +51,9 @@
     },
     "cordova-plugin-camera": {
       "ANDROIDX_CORE_VERSION": "1.6.+",
+      "PACKAGE_NAME": "com.yzq.cordovademo"
+    },
+    "com-yzq-customer-plugin": {
       "PACKAGE_NAME": "com.yzq.cordovademo"
     }
   },
@@ -91,10 +98,19 @@
       "clobbers": [
         "CameraPopoverHandle"
       ]
+    },
+    {
+      "id": "com-yzq-customer-plugin.CustomerPlugin",
+      "file": "plugins/com-yzq-customer-plugin/www/CustomerPlugin.js",
+      "pluginId": "com-yzq-customer-plugin",
+      "clobbers": [
+        "customer_plugin"
+      ]
     }
   ],
   "plugin_metadata": {
     "cordova-plugin-battery-status": "2.0.3",
-    "cordova-plugin-camera": "6.0.0"
+    "cordova-plugin-camera": "6.0.0",
+    "com-yzq-customer-plugin": "1.0.0"
   }
 }
